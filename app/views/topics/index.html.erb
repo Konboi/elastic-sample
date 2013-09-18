@@ -1,0 +1,10 @@
+<%= form_tag topics_path, :method => :get do %>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag "Search", :name => nil %>
+<% end %>
+<%= link_to 'clear', topics_path %>
+
+<% @topic.each do |topic| %>
+  <p>title:<%= topic.title  %></p>
+  <p>body:<%= topic.body  %></p>
+<% end %>
