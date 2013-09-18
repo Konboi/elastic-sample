@@ -43,6 +43,10 @@ data = [
     title: "aaaaa",
     body: "search word word word"
   },
+  {
+    title: "あいうえお",
+    body: "かきくけこ"
+  },
 ]
 
 data.each do |d|
