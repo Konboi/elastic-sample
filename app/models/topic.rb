@@ -1,10 +1,11 @@
 class Topic < ActiveRecord::Base
   include Tire::Model::Search
-  include Tire::Model::Callbacks
+  include Tire::Model::AsyncCallbacks
+  #include Tire::Model::Callbacks
 
   mapping do
-    indexes :title
-    indexes :body
+    indexes :title, analyzer: :kuromoji
+    indexes :body, analyzer: :kuromoji
   end
 
   def self.search(params)

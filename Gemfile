@@ -33,6 +33,10 @@ group :doc do
 end
 
 gem 'tire'
+gem 'resque'
+gem 'tire_async_index'
+#gem 'daemon-spawn'
+#gem 'systemu'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
